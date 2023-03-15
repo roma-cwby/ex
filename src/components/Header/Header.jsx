@@ -3,10 +3,6 @@ import { HeaderLink } from './Header.styled';
 import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
-import { HiHome } from 'react-icons/hi';
-import { MdOutlineExplore } from 'react-icons/md';
-import { MdNotificationAdd } from 'react-icons/md';
-import { CgProfile } from 'react-icons/cg';
 import { useState } from 'react';
 
 export const Header = () => {
