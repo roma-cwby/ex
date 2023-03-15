@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 export const Header = () => {
   let [isHiddenMenu, setIsHiddenMenu] = useState(true);
-  let [isLoggined, setIsLoggined] = useState(true);
+  let isLoggined = false;
 
   function toggleMobMenu() {
     setIsHiddenMenu(!isHiddenMenu);
