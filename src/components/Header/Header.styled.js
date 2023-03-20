@@ -28,11 +28,12 @@ export const HeaderWrapper = styled.header`
       }
     }
 
-    svg {
+    & .header__icon {
       height: 30px;
       width: 30px;
 
       transition: all 200ms linear;
+      fill: var(--text-color);
 
       cursor: pointer;
 
@@ -48,6 +49,7 @@ export const HeaderWrapper = styled.header`
 
     .header__nav {
       display: none;
+      align-items: center;
       a {
         display: flex;
         align-items: center;

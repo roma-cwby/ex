@@ -1,5 +1,6 @@
 import { HeaderWrapper } from './Header.styled';
 import { HeaderLink } from './Header.styled';
+import { Switcher } from 'components/Switcher/Switcher';
 import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 import { HiMenuAlt4 } from 'react-icons/hi';
 import { IoMdClose } from 'react-icons/io';
@@ -16,14 +17,14 @@ export const Header = () => {
   return (
     <HeaderWrapper>
       <div className="container">
-        <a href="/">
+        <a href="/ex">
           <span>L</span>ogo
         </a>
 
         {isHiddenMenu ? (
-          <HiMenuAlt4 onClick={toggleMobMenu} />
+          <HiMenuAlt4 className="header__icon" onClick={toggleMobMenu} />
         ) : (
-          <IoMdClose onClick={toggleMobMenu} />
+          <IoMdClose className="header__icon" onClick={toggleMobMenu} />
         )}
         {!isHiddenMenu && <MobileMenu />}
         <nav className="header__nav">
@@ -41,6 +42,7 @@ export const Header = () => {
             </>
           )}
         </nav>
+        <Switcher />
       </div>
     </HeaderWrapper>
   );

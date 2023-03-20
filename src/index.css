@@ -10,6 +10,7 @@ body {
   --accent-color: #009000;
   --text-color: #000000;
 
+  transition: background-color 300ms linear, color 300ms linear;
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +20,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--bg-color);
 
+}
+
+body.dark {
+  --bg-color: #000030;
+  --text-color: #ffffff;
 }
 
 a {
