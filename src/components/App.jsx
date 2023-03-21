@@ -1,13 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './Header/Header';
-// import { Post } from './Post/Post';
+import { Home } from 'pages/Home/Home';
+import { Explore } from 'pages/Explore/Explore';
 
 export const App = () => {
   return (
     <>
       <Header />
-      {/* <div className="container">
-        <Post />
-      </div> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+      </Routes>
     </>
   );
 };

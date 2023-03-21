@@ -18,7 +18,7 @@ export const Header = () => {
     <HeaderWrapper>
       <div className="container">
         <a href="/ex">
-          <span>L</span>ogo
+          <span>L</span>ogo.
         </a>
 
         {isHiddenMenu ? (

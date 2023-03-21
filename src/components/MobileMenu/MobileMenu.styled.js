@@ -9,6 +9,7 @@ export const MobileMenuWrapper = styled.div`
   background-color: #999999;
 
   animation: menu 200ms linear;
+  z-index: 99;
 
   nav {
     display: flex;
