@@ -1,0 +1,40 @@
+.genre-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.genre-list__item {
+  margin-top: 10px;
+  padding: 5px;
+  color: var(--text-color);
+
+  font-size: 15px;
+
+  transition: color var(--transition), outline-color var(--transition);
+
+  border-radius: 10px;
+  outline: 1px solid var(--text-color);
+  cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    outline-color: var(--accent-color);
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 10px;
+  }
+
+  &.genre-list__item--current {
+    outline: none;
+    background-color: orangered;
+    color: white;
+  }
+}

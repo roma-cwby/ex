@@ -1,13 +1,77 @@
-body {
+@import 'modern-normalize';
+
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
+  --bg-color: silver;
+  --accent-color: #009000;
+  --text-color: #000000;
+  --transition: 300ms linear;
+  --post-bg-color: bisque;
+  --line-color: black;
+  --comments-bg-color: #dbdbdb;
+
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+}
+
+body.dark {
+  --bg-color: #000030;
+  --text-color: #ffffff;
+  --post-bg-color: rgb(0, 16, 39);
+  --line-color: silver;
+  --comments-bg-color: #000025;
+
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: overlay;
+}
+
+.container {
+  max-width: 480px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }

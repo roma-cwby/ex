@@ -1,0 +1,148 @@
+.post {
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--accent-color);
+  background-color: var(--post-bg-color);
+
+  &:not(:first-of-type) {
+    margin-top: 20px;
+  }
+}
+
+.post__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 5px 0;
+  border-bottom: 1px solid var(--line-color);
+
+  & a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+
+    & img {
+      width: 50px;
+      height: 50px;
+
+      margin-right: 10px;
+
+      border-radius: 50%;
+      background-color: white;
+    }
+  }
+
+  & p {
+    font-size: 15px;
+    color: var(--text-color);
+  }
+}
+
+.post__article {
+  height: fit-content;
+  padding: 5px 0;
+
+  overflow: hidden;
+
+  & h2 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+
+  & h3 {
+    width: fit-content;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: rgb(148, 39, 0);
+    color: #ffffff;
+  }
+
+  & p {
+    color: var(--text-color);
+  }
+}
+
+.post__reactions {
+  display: flex;
+  align-items: center;
+
+  & svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    fill: var(--text-color);
+    transition: fill var(--transition);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+      cursor: pointer;
+    }
+  }
+
+  & svg.current {
+    fill: #ff0000;
+  }
+
+  & span {
+    color: var(--text-color);
+    &:not(:last-of-type) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.post__edit-link {
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.post__delete-btn {
+  border: none;
+  color: white;
+  background-color: red;
+  padding: 5px;
+  border-radius: 10px;
+
+  transition: background-color var(--transition), color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: black;
+    background-color: aqua;
+  }
+}
+
+.post__delete-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding-bottom: 50px;
+
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+
+  & button {
+    padding: 5px;
+    border: none;
+    color: #000000;
+    background-color: #00ff00;
+    border-radius: 10px;
+
+    &:last-of-type {
+      color: #ffffff;
+      background-color: #ff0000;
+      margin-left: 20px;
+    }
+  }
+}

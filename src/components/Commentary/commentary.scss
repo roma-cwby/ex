@@ -1,0 +1,69 @@
+.commentary__item {
+  position: relative;
+  width: 100%;
+
+  background-color: var(--comments-bg-color);
+
+  border-radius: 25px;
+  padding: 10px 50px 10px 60px;
+
+  & div {
+    & h3 {
+      display: inline;
+      color: var(--text-color);
+      margin-right: 50px;
+    }
+  }
+
+  & p {
+    color: var(--text-color);
+    padding: 10px 10px 0 10px;
+  }
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    margin-right: 20px;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+}
+
+.commentary__item-edit {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 50px;
+  height: 70px;
+
+  & svg {
+    width: 25px;
+    height: 25px;
+
+    transition: fill var(--transition);
+
+    fill: var(--text-color);
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+      cursor: pointer;
+    }
+  }
+}

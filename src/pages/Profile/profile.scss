@@ -1,0 +1,89 @@
+.profile__contailer {
+  position: relative;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.profile__info {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 10px;
+
+  & img {
+    width: 80px;
+    height: 80px;
+
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    box-shadow: 5px 0 10px var(--accent-color);
+
+    @media screen and (min-width: 768px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  & h2 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+  }
+
+  & h3 {
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+}
+
+.profile__info-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+  & a {
+    padding: 5px;
+    font-size: 20px;
+    color: var(--text-color);
+    border-radius: 10px;
+    transition: color var(--transition), outline var(--transition);
+
+    &.active {
+      color: var(--accent-color);
+      outline: 1px solid var(--accent-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      outline: 1px solid var(--accent-color);
+    }
+  }
+}
+
+.profile__logout-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  border-radius: 10px;
+  padding: 10px;
+
+  color: #ffffff;
+  background-color: #ff0000;
+  border: none;
+
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: #ff2050;
+  }
+}

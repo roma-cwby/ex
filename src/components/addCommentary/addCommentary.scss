@@ -1,0 +1,66 @@
+.commentary {
+  display: grid;
+  grid-column: 1;
+  //   grid-template-columns: 1fr, auto;
+  align-items: center;
+  margin-top: 20px;
+
+  form {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 10px 0 0;
+    margin-right: 0;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+  }
+}
+
+.commentary__text {
+  width: 100%;
+  min-height: 50px;
+
+  border-radius: 25px;
+  font-size: 20px;
+
+  padding: 5px 5px 5px 55px;
+
+  margin-right: 10px;
+
+  overflow: hidden;
+
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+.commentary__send-btn {
+  height: 40px;
+
+  padding: 5px 10px;
+  border-radius: 10px;
+
+  border: none;
+  color: white;
+  background-color: #ff0000;
+
+  transition: background-color var(--transition), color var(--transition);
+
+  &:hover,
+  &:focus {
+    color: #000000;
+    background-color: aqua;
+  }
+}
