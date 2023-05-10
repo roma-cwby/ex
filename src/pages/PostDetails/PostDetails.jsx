@@ -25,7 +25,6 @@ export const PostDetails = () => {
       } else {
         await addCommentary(id, { text: e.target.text.value });
       }
-      console.log('Ok');
     } catch (error) {
       errorNotify(error.response.data.message);
     } finally {
@@ -74,7 +73,9 @@ export const PostDetails = () => {
   return (
     <div className="container post-details__container">
       <ul className="post-details__list">{postData && <Post data={postData} />}</ul>
-      {isLoggedIn && <AddCommentary commentRef={CommentaryRef} clickSend={sendCommentary} />}
+      {isLoggedIn && postData && (
+        <AddCommentary commentRef={CommentaryRef} clickSend={sendCommentary} />
+      )}
       <ul className="post-details__commentary-list">
         {postData?.comments?.map(item => {
           const CommentaryOwner = postData.reactionsOwners.find(user => user._id === item.owner);
