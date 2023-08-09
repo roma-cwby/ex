@@ -7,8 +7,11 @@ import { useState, useRef } from 'react';
 import { toggleLike } from '../../api/api';
 import { useSelector } from 'react-redux';
 import { errorNotify } from '../../helpers/notifications';
+import { NavLink } from 'react-router-dom';
 
 export const Post = ({ data, ownPost, deleteClick }) => {
+  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+
   const userId = useSelector(store => store.auth.user.id);
   const [isDelete, setIsDelete] = useState(false);
   const [likesCounter, setLikesCounter] = useState(data.likes.length);
@@ -48,9 +51,15 @@ export const Post = ({ data, ownPost, deleteClick }) => {
       <div className="post__reactions">
         <BsFillHeartFill className={data.likes.includes(userId) && 'current'} onClick={likeClick} />
         <span ref={likesRef}>{likesCounter}</span>
-        <Link to={`/post/${data._id}`}>
-          <BiComment />
-        </Link>
+        {isLoggedIn ? (
+          <Link to={`/post/${data._id}`}>
+            <BiComment />
+          </Link>
+        ) : (
+          <NavLink to="/authorization/login">
+            <BiComment />
+          </NavLink>
+        )}
         <span>{data.comments.length}</span>
         {ownPost && (
           <Link className="post__edit-link" to={`/profile/add/${data._id}`}>
