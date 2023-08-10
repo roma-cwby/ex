@@ -72,7 +72,7 @@ export const PostDetails = () => {
 
   return (
     <div className="container post-details__container">
-      <ul className="post-details__list">{postData && <Post data={postData} />}</ul>
+      <ul className="post-details__list">{postData && <Post data={postData} allText />}</ul>
       {isLoggedIn && postData && (
         <AddCommentary commentRef={CommentaryRef} clickSend={sendCommentary} />
       )}
