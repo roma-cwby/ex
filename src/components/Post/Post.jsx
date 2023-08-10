@@ -9,6 +9,8 @@ import { useSelector } from 'react-redux';
 import { errorNotify } from '../../helpers/notifications';
 import { NavLink } from 'react-router-dom';
 
+const POST_SIZE = 1500;
+
 export const Post = ({ data, ownPost, deleteClick }) => {
   const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
@@ -45,7 +47,7 @@ export const Post = ({ data, ownPost, deleteClick }) => {
         <article className="post__article">
           <h2>{data.title}</h2>
           <h3>{data.genres.join(', ')}</h3>
-          <p>{data.text}</p>
+          <p>{data.text.length > POST_SIZE ? `${data.text.slice(0, POST_SIZE)}...` : data.text}</p>
         </article>
       </Link>
       <div className="post__reactions">

@@ -21,7 +21,7 @@ export const Header = () => {
     <header>
       <div className="container header__container">
         <a className="header__logo" href="/">
-          Logo
+          ex
         </a>
         <nav className="header__nav">
           <NavLink to="/">Home</NavLink>
